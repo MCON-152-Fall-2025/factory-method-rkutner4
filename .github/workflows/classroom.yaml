@@ -1,10 +1,10 @@
 name: Autograding Tests
 on:
-  - push:
+  push:
     branches:
       - factory_method
-  - workflow_dispatch
-  - repository_dispatch
+  workflow_dispatch:
+  repository_dispatch:
 permissions:
   checks: write
   actions: read
