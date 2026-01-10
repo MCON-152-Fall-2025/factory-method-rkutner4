@@ -129,3 +129,22 @@ For questions or feedback, please open an issue on GitHub.
 
 - [Spring Boot Documentation](https://spring.io/projects/spring-boot)
 - [Apache Maven Documentation](https://maven.apache.org/guides/index.html)
+## Running Locally via SSH Port Forwarding
+
+1. SSH to your VM and start Spring Boot:
+   ```bash
+   cd ~/factory-method-rkutner4/recipeshare
+   mvn spring-boot:run
+On your local machine, forward the port via SSH:
+
+bash
+ssh -L 8082:localhost:8081 -p 5005 student@<your-vm-hostname>
+Open your browser:
+
+App: http://localhost:8082
+
+H2 Console: http://localhost:8082/h2-console
+
+JDBC URL: jdbc:h2:file:./data/recipeshare
+User: SA
+Password: (leave blank)
